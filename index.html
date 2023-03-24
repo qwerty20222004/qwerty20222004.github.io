@@ -153,31 +153,31 @@
 
                 // Масив назв файлів .patt. Масив заповнюється в порядку додавання маркерів
                 // якщо замість .patt було додано баркод, на його місце в масив додається порожній рядок
-                const patternNames = ["" ,"" ,"" ,"" ,""];
+                const patternNames = ["" ,"" ,"" ,""];
                 // Масив баркодів, заповнюється одночасно з масивом патернів
                 // якщо замість баркоду був доданий .patt, на його місце масив додається -1
-                const patternBarcode = [1 ,2 ,3 ,4 ,5];
+                const patternBarcode = [1 ,2 ,3 ,4];
                 // Масив типів контенту кожного маркера, заповнюється значеннями: зображення, модель, відео
-                const modes = ["image" ,"image" ,"image" ,"image" ,"image"];
+                const modes = ["image" ,"image" ,"image" ,"image"];
                 // Масив файлів моделей, якщо немає моделі буде додано порожній рядок
-                const modelFiles = ["" ,"" ,"" ,"" ,""];
+                const modelFiles = ["" ,"" ,"" ,""];
                 // Масив файлів зображень, якщо немає зображення буде додано також порожній рядок
-                const imageFiles = ["01-transistor.jpg" ,"bipolyarnye_tranzistory.jpg" ,"03-transistor.jpg" ,"types-of-transistors.jpg" ,"220px-SMD_Transistor.jpg"];
+                const imageFiles = ["01-transistor.jpg" ,"03-transistor.jpg" ,"220px-SMD_Transistor.jpg" ,"bipolyarnye_tranzistory.jpg"];
                 // Масив файлів відео, якщо немає відео буде ще один порожній рядок
-                const videoFiles = ["" ,"" ,"" ,"" ,""];
+                const videoFiles = ["" ,"" ,"" ,""];
                 // Масив файлів аудіо, якщо немає аудіо буде так само порожній рядок
-                const audioFiles = ["01-transistor.m4a" ,"02.mp3" ,"02-transistor.m4a" ,"04.mp3" ,"audio_2023-03-18_23-04-01.ogg"];
+                const audioFiles = ["01-transistor.m4a" ,"02-transistor.m4a" ,"02.mp3" ,"audio_2023-03-18_23-04-01.ogg"];
                 // Масив опцій повтору аудіо та відео контенту, по дефолту для всіх буде false
-                const repeatOptions = ["false" ,"false" ,"false" ,"false" ,"false"];
+                const repeatOptions = ["false" ,"false" ,"false" ,"false"];
   
                 // Створюємо масив для всіх маркерів
                 const markerRoots = [];
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 4; i++) {
                     markerRoots[i] = new THREE.Group();
                 }
   
                 // Проходимо по кожному маркеру з масиву і додаємо його в головний контейнер
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 4; i++) {
                     mainContainer.add(markerRoots[i]);
 
                     // Якщо поточний маркер – це баркод, створюємо AR контролер під баркод
